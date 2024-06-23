@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="sty.css"> -->
+    <style>
+        body {
+  background-color: #23b1af;
+  background-image: linear-gradient(to top, rgb(24, 82, 75), rgba(5, 5, 5, 0.897), rgba(8, 8, 8, 0.897),rgb(11, 11, 63)
+  );
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: large;
+  color: #586109;
+  padding: 10px;
+  font-weight:bolder;
+  text-transform: capitalize;
+}
+
+nav {
+  background-color: #9e9860;
+  text-align: right;
+  padding: 10px;
+}
+
+.main {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #fff;
+  padding: 20px;
+  height: 600px;
+}
+
+
+@keyframes imgslide {
+  0% {
+    transform: translateX(100%); /* Slide from the right */
+  }
+  100% {
+    transform: translateX(0%); /* Return to the original position */
+  }
+}
+nav a:hover {
+  background-color: #d5c942;
+  color: rgb(65, 53, 53);
+}
+
+#nm,#sk {
+  text-shadow: 0px 0px 7px rgb(255, 68, 0);
+  animation: head1 2s linear infinite, headmov 2s linear ease forwards; /* Use 'forwards' to keep the final state */
+  /* margin-left: 100px; */
+}
+
+#fsd {
+  text-shadow: 0px 0px 7px rgb(229, 255, 0);
+  animation: head1 2s linear infinite, headmov 2s linear ease forwards;
+  /* margin-left:100px; */
+}
+
+/* Rest of your CSS code */
+
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes head1 {
+  0% {
+    text-shadow: 2px;
+  }
+  20% {
+    text-shadow: 0px 0px 10px yellow;
+  }
+  60% {
+    text-shadow: 0px 0px 15px yellow;
+  }
+  80% {
+    text-shadow: 0px 0px 10px yellow;
+  }
+  100% {
+    text-shadow: 0px 0px 2px yellow;
+  }
+}
+@keyframes headmov {
+  0% {
+    
+    transform: translateX(-100%);
+  }
+  20% {
+    transform: translateX(-50%);
+  }
+  60% {
+    transform: translateX(50%);
+  }
+  80% {
+    transform: translateX(50%);
+
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+
+.main h1 {
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  padding-left: 70px;
+}
+
+.main h3 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  padding-left: 60px;
+}
+
+.resume,
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.resume {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.contact {
+  background-color: #555;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.contact h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.contact a {
+  color: #fff;
+}
+
+.about p {
+  color: white;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #3c3333;
+  color: #fff;
+}
+
+/* Additional Styles */
+.progress-bar {
+  width: 90%;
+  height: 30px;
+  background-color: #c88989;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  margin-left: 50px;
+  text-align: center;
+  align-items: center;
+
+}
+
+.progress {
+  height: 100%;
+  background-color: #2225eb;
+  width: 0%;
+  transition: width 1s ease-in-out;
+  border-radius: 5px;
+  /* padding-left: 20px; */
+text-align: center;
+  
+
+}
+
+.skill {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #5f1010ef;
+  font-weight: bold;
+  /* margin-left: 100px; */
+
+}
+
+/* Animation */
+@keyframes progressAnimation {
+  0% {
+    width: 0%;
+  }
+}
+
+.progress-bar .progress {
+  animation: progressAnimation 1s ease-in-out forwards;
+}
+
+/* Add animation delay for each progress bar */
+.progress-bar:nth-child(1) .progress {
+  animation-delay: 0.2s;
+}
+
+.progress-bar:nth-child(2) .progress {
+  animation-delay: 0.4s;
+}
+
+.progress-bar:nth-child(3) .progress {
+  animation-delay: 0.6s;
+}
+
+.progress-bar:nth-child(4) .progress {
+  animation-delay: 0.8s;
+}
+
+.progress-bar:nth-child(5) .progress {
+  animation-delay: 1s;
+}
+
+.progress-bar:nth-child(6) .progress {
+  animation-delay: 1.2s;
+}
+
+.progress-bar:nth-child(7) .progress {
+  animation-delay: 1.4s;
+}
+.about {
+  padding: 20px;
+}
+
+.resume .res {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.contact .num,
+.contact .mail,
+.contact .linked {
+  display: block; /* Change from inline-block to block */
+  margin-bottom: 10px;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.about,
+.resume,
+.contact {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Additional Content */
+
+.about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.about {
+  /* border: 1px solid transparent;  */
+  animation: borderGlow 2s infinite; /* Apply animation */
+}
+
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0px 0px 5px rgb(255, 51, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 20px rgb(255, 123, 0);
+  }
+  100% {
+    box-shadow: 0px 0px 5px rgb(255, 111, 0);
+  }
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding-right: 20px;
+}
+
+.resume a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.resume a:hover {
+  background-color: #e5ff00;
+  color: black;
+}
+
+.contact span {
+  font-size: 1.2rem;
+}
+
+p {
+  color: #fff;
+  font-size: 10px;
+  text-align: justify;
+  line-height:3px;
+}
+
+.secimg {
+  float: left;
+  height: 30px;
+  width: 30px;
+  margin-right: 30px;
+}
+
+
+  
+
+
+.contact h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact h1.num, .contact h1.mail, .contact h1.linkedin {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.contact h1 b {
+  color: #f1dc1f;
+  font-weight: bold;
+}
+
+.contact a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f1dc1f;
+  color: #000;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.contact a:hover {
+  background-color: #000;
+  color: #f1dc1f;
+}
+
+.contact p {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.contact span {
+  font-size: 1.2rem;
+}
+.container{
+  display:flex;
+           flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: white;
+}
+myimg{
+  height:50px;
+  width:50px;
+}
+.aa img{
+  /* height:300px; */
+  /* width:300px; */
+
+    width: 200px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    border-radius: 30%; /* Makes the image oval */
+    object-fit: cover; /* Ensures the image covers the oval shape properly */
+    align-items:left;
+}
+.bb h1{
+  color:white;
+}
+.about h1{
+  align-items: center;
+}
+.skills h1{
+  
+  text-align: center;
+}
+.span{
+  text-align: center;
+  align-items: center;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">home</a>
+        <a href="#ab">about</a>
+        <a href="#sk">skills</a>
+        <!-- <a href="#resu">resume</a> -->
+        <a href="#con">contact</a>
+    </nav> <br> 
+    <div class="container">
+      <br> <br> <br> <br> <br> <br>
+      <sec class="bb">
+        <h1 > Hello! I am Urshitha C R</h1></sec> <br> <br> <br>
+    <sec class="aa">
+        <img src="me.jpg" alt="" id="myimg"></sec>
+        <!-- <h1 id="fsd" >full stack developer</h1> -->
+       
+  
+    </div> <br> <br>
+    <div class="about" id="ab">
+        <h1 id="sk" style="color:white;text-decoration:underline">ABOUT</h1>
+    
+        
+        <p>I am a full-stack enthusiast currently pursuing a degree in Computer Science and Engineering at Canara Engineering College, Manglore. I'm currently in my 3rd year of engineering and have been building a strong foundation in various aspects of technology. My skills encompass a wide range of programming languages and web technologies, including HTML, CSS, JavaScript, and Python.My journey in the field of Computer Science and Engineering has been both inspiring and educational. At Canara Engineering College, I've had the privilege of learning from experienced professors and collaborating with motivated peers. This environment has provided me with valuable insights into the dynamic world of technology.
+            
+            I firmly believe that an internship opportunity would be the ideal platform for me to apply my expertise in real-world scenarios and to continue learning from experienced professionals in the industry.
+        
+        </p>
+    </div>
+    <br><br><br><br><br><br><br>
+    <div class="skills">
+      <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight:bolder;text-decoration: underline;color:white;"> SKILLS</h1>
+      <div class="progress-bar">
+        <!-- <div class="progress" style="width: 90%;"></div> -->
+        <span class="skill">HTML </span>
+      </div>
+      <div class="progress-bar">
+        <!-- <div class="progress" style="width: 75%;"></div> -->
+        <span class="skill">CSS </span>
+      </div>
+      <div class="progress-bar">
+        <!-- <div class="progress" style="width: 70%;"></div> -->
+        <span class="skill">JavaScript </span>
+      </div>
+      <div class="progress-bar">
+        <!-- <div class="progress" style="width: 75%;"></div> -->
+        <span class="skill">C </span>
+      </div>
+      <div class="progress-bar">
+        <!-- <div class="progress" style="width: 50%;"></div> -->
+        <span class="skill">Java </span>
+      </div>
+      <div class="progress-bar">
+        <!-- <div class="progress" style="width: 50%;"></div> -->
+        <span class="skill">Python </span>
+      </div>
+      <div class="progress-bar">
+        <!-- <div class="progress" style="width: 60%;"></div> -->
+        <span class="skill">SQL </span>
+      </div>
+      
+    </div>
+    <div class="contact">
+        <h1 id="con" style="color:white;padding-right:30px;">contact:</h1>
+        <ul>
+       <li><h1 class="num"><b>phno.:</b>8431632215&nbsp;&nbsp;</h1></li> 
+       <li><h1 class="mail"><b>email:</b>urshitha27@gmail.com&nbsp;&nbsp;</h1></li> 
+       <li><h1 class="linkedin"><b>linked in:</b>https://www.linkedin.com/in/ur
+        shitha-cr-4897b2228
+          </h1></li>   </ul> 
+    </div>
+    <footer>
+        <span>copyright&copy;Urshitha</span>
+    </footer>
+    
+</body>
+</html>
